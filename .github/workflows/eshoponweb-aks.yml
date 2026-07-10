@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 env:
   ACR_LOGIN_SERVICE: aistrainingacr.azurecr.io
-  TAG_NAME: eshopping
+  TAG_NAME: eshopping:1.0.0
   IMAGE_NAME: ${{ vars.ACR_LOGIN_SERVICE }}/${{ vars.TAG_NAME }}
 
 jobs:
