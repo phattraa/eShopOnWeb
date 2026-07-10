@@ -5,6 +5,8 @@ env:
   ACR_LOGIN_SERVICE: aistraining.azurecr.io
   TAG_NAME: eshopping:1.0.0
   IMAGE_NAME: aistraining.azurecr.io/eshopping:1.0.0
+  RESOURCE_GROUP: rg-022
+  CLUSTER_NAME: aks-demo
 
 jobs:
   build:
