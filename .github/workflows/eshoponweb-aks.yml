@@ -4,6 +4,7 @@ on: workflow_dispatch
 env:
   ACR_LOGIN_SERVICE: aistrainingacr.azurecr.io
   TAG_NAME: eshopping
+  IMAGE_NAME: ${{ env.ACR_LOGIN_SERVICE }}/${{ env.TAG_NAME }}
 
 jobs:
   build:
@@ -21,5 +22,5 @@ jobs:
 
       - name: Build and Push Docker Image2
         run: |
-          docker build -t ${{ env.ACR_LOGIN_SERVICE }}/eshoponweb:${{ env.TAG_NAME }} .
-          docker push ${{ env.ACR_LOGIN_SERVICE }}/eshoponweb:${{ env.TAG_NAME }}
+          docker build -t ${{ env.IMAGE_NAME }} .
+          docker push ${{ env.IMAGE_NAME }}
